@@ -22,6 +22,11 @@ include 'includes/db.php';
                 </ul>
         <h2>Car list </h2>
     </div>
+<form action="search.php" method="post">
+    <input type="text" name="search" placeholder="Search cars">
+    <input type="submit" value=">>">
+</form>  
+
     <br>
     
     <a href="insert.php" role="button" class="btn btn-primary pull-right">Add Data</a>
