@@ -8,10 +8,10 @@ if( $con->connect_error)
 {
     die('Error: ' . $con->connect_error);
 }
-$sql = "SELECT * car FROM loginsystem";
+$sql = "SELECT * FROM `car`";
 if( isset($_GET['search']) ){
     $name = mysqli_real_escape_string($con, htmlspecialchars($_GET['search']));
-    $sql = "SELECT * car FROM loginsystem WHERE name ='$name'";
+    $sql = "SELECT * FROM `car` WHERE `name` ='$name'";
 }
 $result = $con->query($sql);
 ?>
@@ -32,7 +32,6 @@ href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <h2>List of cars</h2>
 <table class="table table-striped table-responsive">
 <tr>
-<th>ID</th>
 <th>name</th>
 <th>car_type</th>
 <th>bodytype</th>
@@ -60,7 +59,7 @@ while($row = $result->fetch_assoc()){
 </html>
 <?php
 
-while($row = $result->fetch_assoc(false)){
+while($row = $result->fetch_assoc()){
     ?>
     <tr>
     <td><?php echo $row['id']; ?></td>
