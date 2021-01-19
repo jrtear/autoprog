@@ -96,7 +96,7 @@ if(mysqli_num_rows($result) > 0){
              $img= $row['image'];
         }
 
-            unlink("images/".$img);
+            /*unlink("images/".$img);*/
 
         $query = "DELETE FROM car WHERE id = $id";
         
