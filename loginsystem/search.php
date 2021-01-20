@@ -11,13 +11,20 @@ if( $con->connect_error)
 $sql = "SELECT * FROM `car`";
 if( isset($_GET['search']) ){
     $name = mysqli_real_escape_string($con, htmlspecialchars($_GET['search']));
-    $sql = "SELECT * FROM `car` WHERE `name` ='$name'";
+    $car_type = mysqli_real_escape_string($con, htmlspecialchars($_GET['search']));
+    $bodytype = mysqli_real_escape_string($con, htmlspecialchars($_GET['search']));
+    $motor = mysqli_real_escape_string($con, htmlspecialchars($_GET['search']));
+    $fuel = mysqli_real_escape_string($con, htmlspecialchars($_GET['search']));
+    $gearbox = mysqli_real_escape_string($con, htmlspecialchars($_GET['search']));
+    $sql = "SELECT * FROM car WHERE name ='$name' or car_type='$car_type' or bodytype='$bodytype'or motor='$motor'or fuel='$fuel'or gearbox='$gearbox'";
 }
 $result = $con->query($sql);
 ?>
 <!DOCTYPE html>
-<html>
-<head>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Search</title>
 <link rel="stylesheet" type="text/css"
 href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">

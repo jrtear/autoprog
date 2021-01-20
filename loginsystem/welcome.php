@@ -14,25 +14,24 @@ include 'includes/db.php';
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <div class="container">
 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
+                <ul class="nav navbar-nav" >
                     <li>
                         <a href="logout.php">Logout</a>
                     </li>
                   
                 </ul>
         <h2>Car list </h2>
-    </div>
-<form action="search.php" method="post">
-    <input type="text" name="search" placeholder="Search cars">
-    <input type="submit" value=">>">
-</form>  
-
-    <br>
+    </div>   
+   <br>
     
     <a href="insert.php" role="button" class="btn btn-primary pull-right">Add Data</a>
+    <form action="search.php" method="post">
+    <input type="submit" value=" Search cars" class="btn btn-sm btn-primary">
+</form> 
     <br>
     <br>
     <table class="table table-hover table-striped">
+
         <tr>
             <th>ID</th>
             <th>Name</th>
