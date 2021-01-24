@@ -1,4 +1,5 @@
 <?php
+// logout
 session_start();
 $_SESSION['login']=="";
 
