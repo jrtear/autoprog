@@ -1,5 +1,6 @@
 <?php
 session_start();
+// Logout
 $_SESSION['login']=="";
 
 session_unset();

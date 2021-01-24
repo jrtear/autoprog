@@ -16,7 +16,8 @@ if($msg)
 echo "<script>alert('Data deleted');</script>";
 }
 }
-?><!DOCTYPE html>
+?>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -24,26 +25,21 @@ echo "<script>alert('Data deleted');</script>";
     <meta name="description" content="">
     <meta name="author" content="Dashboard">
     <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
-
     <title>Admin | Manage Users</title>
     <link href="assets/css/bootstrap.css" rel="stylesheet">
     <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
     <link href="assets/css/style.css" rel="stylesheet">
     <link href="assets/css/style-responsive.css" rel="stylesheet">
   </head>
-
   <body>
-
   <section id="container" >
+<!--Top menu-->   
       <header class="header black-bg">
               <div class="sidebar-toggle-box">
                   <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
               </div>
             <a href="#" class="logo"><b>Admin Dashboard</b></a>
             <div class="nav notify-row" id="top_menu">
-               
-                         
-                   
                 </ul>
             </div>
             <div class="top-menu">
@@ -51,8 +47,10 @@ echo "<script>alert('Data deleted');</script>";
                     <li><a class="logout" href="logout.php">Logout</a></li>
             	</ul>
             </div>
+<!--Top menu-->
         </header>
       <aside>
+<!--Sidebar-->
           <div id="sidebar"  class="nav-collapse ">
               <ul class="sidebar-menu" id="nav-accordion">
               
@@ -70,22 +68,18 @@ echo "<script>alert('Data deleted');</script>";
                       <a href="manage-users.php" >
                           <i class="fa fa-users"></i>
                           <span>Manage Users</span>
-                      </a>
-                   
+                      </a>                  
                   </li>
-              
-                 
               </ul>
           </div>
+<!--Sidebar-->
       </aside>
+<!--Manage user form-->
       <section id="main-content">
           <section class="wrapper">
           	<h3><i class="fa fa-angle-right"></i> Manage Users</h3>
 				<div class="row">
-				
-                  
-	                  
-                  <div class="col-md-12">
+      <div class="col-md-12">
                       <div class="content-panel">
                           <table class="table table-striped table-advance table-hover">
 	                  	  	  <h4><i class="fa fa-angle-right"></i> All User Details </h4>
@@ -126,6 +120,7 @@ echo "<script>alert('Data deleted');</script>";
                       </div>
                   </div>
               </div>
+<!--Manage user form End-->
 		</section>
       </section
   ></section>
@@ -139,9 +134,7 @@ echo "<script>alert('Data deleted');</script>";
       $(function(){
           $('select.styled').customSelect();
       });
-
   </script>
-
   </body>
 </html>
 <?php } ?>

@@ -26,16 +26,14 @@ $_SESSION['msg']="Profile Updated successfully";
     <meta name="description" content="">
     <meta name="author" content="Dashboard">
     <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
-
     <title>Admin | Update Profile</title>
     <link href="assets/css/bootstrap.css" rel="stylesheet">
     <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
     <link href="assets/css/style.css" rel="stylesheet">
     <link href="assets/css/style-responsive.css" rel="stylesheet">
   </head>
-
+  <!--Top menu--> 
   <body>
-
   <section id="container" >
       <header class="header black-bg">
               <div class="sidebar-toggle-box">
@@ -43,9 +41,6 @@ $_SESSION['msg']="Profile Updated successfully";
               </div>
             <a href="#" class="logo"><b>Admin Dashboard</b></a>
             <div class="nav notify-row" id="top_menu">
-               
-                         
-                   
                 </ul>
             </div>
             <div class="top-menu">
@@ -54,44 +49,39 @@ $_SESSION['msg']="Profile Updated successfully";
             	</ul>
             </div>
         </header>
+<!--Top menu--> 
       <aside>
+<!--Sidebar-->
           <div id="sidebar"  class="nav-collapse ">
               <ul class="sidebar-menu" id="nav-accordion">
-              
               	  <p class="centered"><a href="#"><img src="assets/img/ui-sam.jpg" class="img-circle" width="60"></a></p>
               	  <h5 class="centered"><?php echo $_SESSION['login'];?></h5>
-              	  	
                   <li class="mt">
                       <a href="change-password.php">
                           <i class="fa fa-file"></i>
                           <span>Change Password</span>
                       </a>
                   </li>
-
                   <li class="sub-menu">
                       <a href="manage-users.php" >
                           <i class="fa fa-users"></i>
                           <span>Manage Users</span>
-                      </a>
-                   
+                      </a>       
                   </li>
-              
-                 
               </ul>
           </div>
+<!--Sidebar-->
       </aside>
-      <?php $ret=mysqli_query($con,"select * from users where id='".$_GET['uid']."'");
+      <?php // Update users
+      $ret=mysqli_query($con,"select * from users where id='".$_GET['uid']."'");
 	  while($row=mysqli_fetch_array($ret))
 	  
 	  {?>
+<!--Update users-->
       <section id="main-content">
           <section class="wrapper">
-          	<h3><i class="fa fa-angle-right"></i> <?php echo $row['fname'];?>'s Information</h3>
-             	
+          	<h3><i class="fa fa-angle-right"></i> <?php echo $row['fname'];?>'s Information</h3>         	
 				<div class="row">
-				
-                  
-	                  
                   <div class="col-md-12">
                       <div class="content-panel">
                       <p align="center" style="color:#F00;"><?php echo $_SESSION['msg'];?><?php echo $_SESSION['msg']=""; ?></p>
@@ -135,6 +125,7 @@ $_SESSION['msg']="Profile Updated successfully";
                       </div>
                   </div>
               </div>
+<!--Update users form end-->
 		</section>
         <?php } ?>
       </section></section>
@@ -148,9 +139,7 @@ $_SESSION['msg']="Profile Updated successfully";
       $(function(){
           $('select.styled').customSelect();
       });
-
   </script>
-
   </body>
 </html>
 <?php } ?>

@@ -1,6 +1,6 @@
 <?php
 include 'includes/db.php';
-
+// Insert cars
 if(isset($_POST['insert']))
 {
     $name         = clean($_POST['name']);
@@ -33,6 +33,8 @@ if(isset($_POST['insert']))
 
 }
 session_start();
+
+//Checking session is valid or not
 if (strlen($_SESSION['id']==0)) {
   header('location:logout.php');
   } else{
@@ -48,6 +50,7 @@ if (strlen($_SESSION['id']==0)) {
     <meta name="description" content="">
     <title>Add Car</title>
   </head>
+<!--Navbar-->
      <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
             <div class="navbar-header">
@@ -67,7 +70,7 @@ if (strlen($_SESSION['id']==0)) {
                     <li>
                         <a href="logout.php">Logout</a>
                     </li>
-                  
+<!--Navbar end-->                  
                 </ul>
             </div>
         </div>
@@ -79,7 +82,7 @@ if (strlen($_SESSION['id']==0)) {
     <h2></h2>
     <h2></h2>
 <div class="container">
-
+<!--Car add form-->
     <div class="jumbotron text-center">
         <h2>Add car</h2>
     </div>
@@ -121,6 +124,7 @@ if (strlen($_SESSION['id']==0)) {
     <div class="form-group">
         <input type="submit" class="btn btn-success" value="Insert data" name="insert">
     </div>
+<!--Car add form end-->
 </form>
 </div>
 </div>

@@ -1,7 +1,11 @@
 <?php
 session_start();
+
+
 error_reporting(0);
 include("dbconnection.php");
+
+// Admin login
 if(isset($_POST['login']))
 {
   $adminusername=$_POST['username'];
@@ -43,7 +47,7 @@ exit();
     <link href="assets/css/style.css" rel="stylesheet">
     <link href="assets/css/style-responsive.css" rel="stylesheet">
   </head>
-
+<!-- Admin login form-->
   <body>
 	  <div id="login-page">
 	  	<div class="container">

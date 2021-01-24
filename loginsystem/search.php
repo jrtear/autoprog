@@ -1,4 +1,5 @@
 <?php
+// database connection
 $localhost = "localhost";
 $username = "root";
 $password = "";
@@ -8,6 +9,7 @@ if( $con->connect_error)
 {
     die('Error: ' . $con->connect_error);
 }
+// Search cars
 $sql = "SELECT * FROM `car`";
 if( isset($_GET['search']) ){
     $name = mysqli_real_escape_string($con, htmlspecialchars($_GET['search']));
@@ -22,6 +24,8 @@ $result = $con->query($sql);
 ?>
 <?php
 session_start();
+
+//Checking session is valid or not
 if (strlen($_SESSION['id']==0)) {
   header('location:logout.php');
   } else{
@@ -36,6 +40,7 @@ if (strlen($_SESSION['id']==0)) {
 <link rel="stylesheet" type="text/css"
 href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
+<!--Navbar-->
 <body>
 	 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
@@ -56,7 +61,7 @@ href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
                     <li>
                         <a href="logout.php">Logout</a>
                     </li>
-                  
+<!--Navbar end-->                  
                 </ul>
             </div>
         </div>
@@ -67,6 +72,7 @@ href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <h2></h2>
     <h2></h2>
     <h2></h2>
+<!--Search form-->
 <div class="container">
 <label>Search</label>
 <form action="" method="GET">
@@ -100,6 +106,7 @@ while($row = $result->fetch_assoc()){
 </table>
 </div>
 </body>
+<!--Search form end-->
 </html>
 <?php
 
@@ -113,8 +120,8 @@ while($row = $result->fetch_assoc()){
     <td><?php echo $row['motor']; ?></td>
     <td><?php echo $row['fuel']; ?></td>
     <td><?php echo $row['gearbox']; ?></td>
-
     </tr>
+<!--Search form end-->
     <?php
 }
 ?>

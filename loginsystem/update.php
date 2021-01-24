@@ -3,7 +3,7 @@ include 'includes/db.php';
 ?>
 
 <?php 
-
+// Update cars
 if(isset($_GET['update'])){
     
     
@@ -15,22 +15,17 @@ $query = "SELECT * FROM car WHERE id = $id";
 $result = mysqli_query($conn,$query);
 
 if(mysqli_num_rows($result) > 0){
-    
     while($row = mysqli_fetch_array($result)){
-        
     $name         = $row['name'];
     $car_type     = $row['car_type'];
     $bodytype     = $row['bodytype'];
     $motor         = $row['motor'];
     $fuel        = $row['fuel'];
-    $gearbox        = $row['gearbox']; /*
-    $image_name   = $_FILES['image']['name'];
-    $image        = $_FILES['image']['tmp_name'];*/
-
+    $gearbox        = $row['gearbox'];
         }
     }
 }
-
+// Update cars
 if(isset($_POST['update'])){
     
 
@@ -61,7 +56,7 @@ if(isset($_POST['update'])){
     
     if($result){
         
-        header('location:welcome.php');
+        header('location:addcar.php');
     }
     else
     {
@@ -71,6 +66,7 @@ if(isset($_POST['update'])){
 }
 
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -79,6 +75,7 @@ if(isset($_POST['update'])){
     <meta name="description" content="">
     <title>Update cars</title>
   </head>
+<!--Car add form-->  
 <div class="container">
     <div class="jumbotron text-center">
         <h2>Edit Cars</h2>
@@ -113,7 +110,7 @@ if(isset($_POST['update'])){
     <div class="form-group">
         <label for="name">Image:</label>
         <img src= "<?= "images/".$image?>" alt="" width="100px" height="100px" class="thumbnail">
-        <input type="file" name="image" class="form-control" placeholder="Enter gearbox" value="<?php echo $gearbox ?>">
+        <input type="file" name="image" class="form-control" placeholder="Enter image" value="<?php echo $gearbox ?>">
     </div>
 
     <div class="form-group">

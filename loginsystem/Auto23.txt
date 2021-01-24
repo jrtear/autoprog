@@ -1,0 +1,20 @@
+
+AUTO23 
+
+Projektis on olemas võimalus kasutajal sisse ja välja logida. 
+Selleks , et sisse või välja logida peab olema kasutaja registeeritud, mida saab teha avalehel. 
+Parooli sätestamine on võimalik. 
+Admin saab sisse logida ja välja logida ning oma parooli muuta. Lisaks saab admin kasutajaid kustutada ja uuendada tema andmeid.
+Sisseloginud kasutajal on võimalus lisada autosid. Võimalik on sisestada auto tüübi, kehatüübi, mootori, kütuse ja käigukasti omadused ja ka pilt auto kohta.
+Lisaks saab otsida autosid tema omaduste järgi(otsides peab olema täisväärtus, mida otsid). 
+Lisaks on võimalik autosid uuendada ja kustutada. Auto listi on võimalik kuvada.
+Sisseloginud kasutajal on võimalik alati navigeerida ennast Auto23 esilehele ja välja logida.
+
+
+Mysql-is on olemas andmed registeeritud kasutajate kohta. 
+Kasutaja info salvestatakse eesnime, perekonnanime, emaili, salasõna ja telefoni nr. järgi. Kasutajad salvestatakse users tabelisse.
+Admini parool on krüpteeritud. 
+Autod on salvestatud tema auto tüübi, kehatüübi, mootori, kütuse ja käigukasti järgi. Autod salvestatakse car tabelisse.
+
+
+Johan-Rasmus Teär

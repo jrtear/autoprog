@@ -1,21 +1,24 @@
 <?php
 session_start();
+
+//Checking session is valid or not
 if (strlen($_SESSION['id']==0)) {
   header('location:logout.php');
   } else{
     
-?><!DOCTYPE html>
+?>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
-    <title>Auto23 </title>
+    <title>Auto23</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/heroic-features.css" rel="stylesheet">
 </head>
+<!--Navbar-->
 <body>
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
@@ -41,6 +44,8 @@ if (strlen($_SESSION['id']==0)) {
             </div>
         </div>
     </nav>
+<!--Navbar end-->
+<!--Banner-->
     <div class="container">
         <header class="jumbotron hero-spacer">
             <h1>Auto23</h1>
@@ -48,22 +53,17 @@ if (strlen($_SESSION['id']==0)) {
             <p><a  href="logout.php" class="btn btn-primary btn-large">Logout </a>
             </p>
         </header>
-
         <hr>
-
-
-      
 <a href="addcar.php" role="button" class="btn btn-primary pull-right">Add Data</a>
-
         </div>
-
         <hr>
-
-
     </div>
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <div class="footer bg-dark">
+        English/Eesti
+    </div>
+    <!--Banner end-->
 </body>
-
 </html>
 <?php } ?>

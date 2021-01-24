@@ -79,6 +79,7 @@ echo "<script>alert('Email not register with us');</script>";
 }
 
 ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -102,6 +103,7 @@ echo "<script>alert('Email not register with us');</script>";
 				   </script>
 <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,600,700,200italic,300italic,400italic,600italic|Lora:400,700,400italic,700italic|Raleway:400,500,300,600,700,200,100' rel='stylesheet' type='text/css'>
 </head>
+<!--Banner-->
 <body>
 <div class="main">
 		<h1>Registration and Login System</h1>
@@ -115,11 +117,11 @@ echo "<script>alert('Email not register with us');</script>";
 				  <li class="resp-tab-item lost" aria-controls="tab_item-2" role="tab"><div class="top-img"><img src="images/top-key.png" alt=""/></div><span>Forgot Password</span></li>
 				  <div class="clear"></div>
 			  </ul>		
-			  	 
+<!--Banner end-->			  	 
 			<div class="resp-tabs-container">
 					<div class="tab-1 resp-tab-content" aria-labelledby="tab_item-0">
 					<div class="facts">
-					
+<!--Registration form-->					
 						<div class="register">
 							<form name="registration" method="post" action="" enctype="multipart/form-data">
 								<p>First Name </p>
@@ -138,10 +140,11 @@ echo "<script>alert('Email not register with us');</script>";
 									<div class="clear"> </div>
 								</div>
 							</form>
-
+<!--Registration form end-->
 						</div>
 					</div>
 				</div>		
+<!--Login form-->
 			 <div class="tab-2 resp-tab-content" aria-labelledby="tab_item-1">
 					 	<div class="facts">
 							 <div class="login">
@@ -161,11 +164,12 @@ echo "<script>alert('Email not register with us');</script>";
 									</div>
 									<div class="clear"> </div>
 								</div>
-
+<!--Login form end-->
 							</form>
 					</div>
 				</div> 
-			</div> 			        					 
+			</div> 		
+<!--Forgot password form-->	        					 
 				 <div class="tab-2 resp-tab-content" aria-labelledby="tab_item-1">
 					 	<div class="facts">
 							 <div class="login">
@@ -179,6 +183,7 @@ echo "<script>alert('Email not register with us');</script>";
 										<div class="submit three">
 											<input type="submit" name="send" onClick="myFunction()" value="Send Email" >
 										</div>
+<!--Forgot password form-->	
 									</form>
 									</div>
 				         	</div>           	      
@@ -187,6 +192,5 @@ echo "<script>alert('Email not register with us');</script>";
 		        </div>
 	        </div>
 	     </div>
-
 </body>
 </html>
