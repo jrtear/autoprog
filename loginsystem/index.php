@@ -110,11 +110,14 @@ echo "<script>alert('Email not register with us');</script>";
 	 <div class="sap_tabs">	
 			<div id="horizontalTab" style="display: block; width: 100%; margin: 0px;">
 			  <ul class="resp-tabs-list">
-			  	  <li class="resp-tab-item" aria-controls="tab_item-0" role="tab"><div class="top-img"><img src="images/top-note.png" alt=""/></div><span>Register</span>
-			  	  	
+			  	  <li class="resp-tab-item" aria-controls="tab_item-0" role="tab"><div class="top-img"><img src="images/top-note.png" alt=""/></div><span>Register</span>	
 				</li>
 				  <li class="resp-tab-item" aria-controls="tab_item-1" role="tab"><div class="top-img"><img src="images/top-lock.png" alt=""/></div><span>Login</span></li>
 				  <li class="resp-tab-item lost" aria-controls="tab_item-2" role="tab"><div class="top-img"><img src="images/top-key.png" alt=""/></div><span>Forgot Password</span></li>
+ <div class="container">
+   <br>
+    <a href="ee_index.php" role="button" class="btn btn-primary pull-right">Change language</a>
+</form>
 				  <div class="clear"></div>
 			  </ul>		
 <!--Banner end-->			  	 
@@ -185,8 +188,9 @@ echo "<script>alert('Email not register with us');</script>";
 										</div>
 <!--Forgot password form-->	
 									</form>
-									</div>
-				         	</div>           	      
+							</div>
+							</div>
+				         	</div>         	      
 				        </div>	
 				     </div>	
 		        </div>
